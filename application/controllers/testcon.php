@@ -71,7 +71,6 @@ class testcon extends CI_Controller{
 			echo $row["wastecomponent"] . "<>";
 		endforeach;
 	}
-
 	function testmail() {
 		$this->load->model("sendmail_model");		
 		echo $this->sendmail_model->testmail("saleoffice@thaionlyone.com");

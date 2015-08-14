@@ -87,7 +87,7 @@
 						<?php else : ?>
 					<a href="<?=base_url()?>envflow/envprice?qt_id=<?=$row->REF1?>&msg_id=<?=$row->ID?>" 
 					type="button" class="btn btn-primary">รายละเอียดค่าวิเคราะห์</a>
-					<a href="<?=base_url()?>envflow/envprice?qt_id=<?=$row->REF1?>&msg_id=<?=$row->ID?>" 
+					<a href="<?=base_url()?>transport/get_waste?qt_id=<?=$row->REF1?>&msg_id=<?=$row->ID?>" 
 					type="button" class="btn btn-primary">จัดการขนส่ง-รับน้ำ</a>
 						<?php endif; ?>					
 					<?php endif;?>

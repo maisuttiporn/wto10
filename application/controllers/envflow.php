@@ -82,6 +82,9 @@ class envflow extends CI_Controller {
 			$this->sendmail_model->clearALLto();
 			} // end foreach
 			
+
+			// send back to MD 
+			/*
 			$data = array(
 					"msg_body"		=>	$msg_body,
 					"msg_type"		=>	"envanalysis",
@@ -105,7 +108,7 @@ class envflow extends CI_Controller {
 			$this->sendmail_model->techreviewapp_mail($userto_email,
 			$qt_id,$DOC_ID,$qt_compname,$user_FULLNAME);	
 			$this->sendmail_model->clearALLto();	
-			
+			*/
 			// Analysis Submit
 			$cpName = $this->input->post("cpName");	
 			$cpContact = $this->input->post("cpContact");	
