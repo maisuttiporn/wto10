@@ -112,16 +112,15 @@ class workflow extends CI_Controller{
 		$qt_id = $this->input->get("qt_id");
 		$msg_id = $this->input->get("msg_id");
 		$this->load->model("saleservice_model");
-		$this->load->model("workflow_model");
+		$this->load->model("workflow_model");	
 
 		$data["msg"] = $this->workflow_model->getitem_msg($msg_id);
 		$data["quotation"] = $this->saleservice_model->getitem_quotation($qt_id);
 		$data["quotationdesc"] = $this->saleservice_model->getitem_quotationdesc($qt_id);
 		$data["msgall"] = $this->workflow_model->get_msg($qt_id);
-		
+			
 		$this->load->view("main/header");
-		$this->load->view("workflow/mdreview_app",$data);
-		
+		$this->load->view("workflow/mdreview_send",$data);		
 		$this->load->view("main/footer");
 	}
 	function mdreview_submit() {
@@ -172,7 +171,7 @@ class workflow extends CI_Controller{
 		$this->workflow_model->techreviewprove_updateqt($qt_id,$user_ID,$app);
 		endforeach;		
 		redirect('../taskprocess','refresh');
-		}
+		} 
 	}
 	function mdreview_app() {
 		$data = array();

@@ -1,7 +1,7 @@
 <div class="row">
 <div class="span16">
 	<div class="span16">
-		<h3>MD Approve</h3>
+		<h3>MD Approve1</h3>
 		<hr>
 	</div>
 	<div class="span16">
@@ -73,7 +73,8 @@
 		<input type="hidden" name="qt_compname" value="<?= $quotation->qt_compname?>">
 		<textarea style="width:93%;height:110px;"  name="msg_body" id=""  class="form-control"></textarea>			
 	</div>
-        	<button style="width:150px;"  name="submit" type="submit" class="btn btn-primary btn-large" value="CONFIRM"> Send </button>
+        	<button style="width:150px;"  name="submit" type="submit" 
+        	class="btn btn-primary btn-large" value="submit"> Send </button>
     </form>
     </footer>
 	</div>

@@ -77,8 +77,16 @@ class transport extends CI_Controller{
 		//echo $qt_id;
 		//echo $msg_id;
 		redirect("../transport/get_waste?qt_id=$qt_id&msg_id=$msg_id",'refresh');
-
-
+	}
+	function trans_pdf(){
+		$html=$this->load->view('transport/trans_pdf', $data, true); 		
+		$this->load->library('pdf');
+		$pdf = $this->pdf->load();		
+		ob_clean(); 
+		$pdf->autoScriptToLang = true;
+		$pdf->autoLangToFont = true;		
+		$pdf->WriteHTML($html);		
+		$pdf->Output($pdfFilePath, "I");
 	}
 }
 
