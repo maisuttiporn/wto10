@@ -37,7 +37,7 @@ border-right: 2px solid black;
 </style>
 <table cellpadding="0" cellspacing="0" width="100%">
 	<tr>
-		<td width="25%"><img width="120" src="http://dev.nohat/Pendding/wto10/theme/img/logo-tmos.png" 
+		<td width="25%"><img width="120" src="<?=base_url()?>theme/img/logo-tmos.png" 
 		alt="">
 		<br>
 		<strong>ที่ </strong> TOMS 01/2558</td>
