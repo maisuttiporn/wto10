@@ -629,6 +629,11 @@ function techreview_submit() {
 	}
 }
 //Technical Review ####################################################################################################################
+	function quo_pdf(){
+		$this->load->model("saleservice_model");
+		$this->saleservice_model->quo_pdf();
+		
+	}
 }
 
 

@@ -1,6 +1,7 @@
 <style type="text/css">
 @page{
-	margin: 20px;
+
+	margin-top: 0px;
 }
 .span1 {
 border-bottom: 1px dotted black;	
@@ -24,12 +25,12 @@ border-bottom: 2px solid black;
 border-right: 2px solid black;
 }
 .textbox1{
-	font-size: 33;
+	font-size: 20;
 }
 </style>
 <table cellpadding="0" cellspacing="0" width="100%">
 	<tr>
-		<td><strong>THAI ONLY ONE MANAGE AND SERVICE CO.,LTD.</strong></td>
+		<td><h3><b>THAI ONLY ONE MANAGE AND SERVICE CO.,LTD.</b></h3></td>
 		<td style="text-align:right;"><span class="texttop">แบบกำกับการขนส่ง 02</span></td>
 	</tr>
 </table>
@@ -39,22 +40,21 @@ border-right: 2px solid black;
 	<td>
 	<table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding:0px;margin-top:-13px;">
 		<tr>
-			<td width="40%"></td>
-			<td width="35%" class="texttop">หมายเลขใบกำกับการขนส่งของเสียอันตราย : Mainifest No.</td>
-			<td>
-			<span class="textbox1" style="letter-spacing:-4.5px;">
-			&#x25fb;&#x25fb;&#x25fb;&#x25fb;&#x25fb; </span>&nbsp;&nbsp;&nbsp;&nbsp;
-			<span class="textbox1" style="letter-spacing:-4.5px;">
-			&#x25fb;&#x25fb;</span>
+			<td width="45%"></td>
+			<td width="30%" class="texttop">หมายเลขใบกำกับการขนส่งของเสียอันตราย : Mainifest No.</td>
+			<td>&nbsp;&nbsp;&nbsp;
+			<span class="textbox1" style="letter-spacing:1px;">
+			&#x25fb;&#x25fb;&#x25fb;&#x25fb;&#x25fb; </span>
+			<span class="textbox1" style="letter-spacing:1px;"> &#x25fb;&#x25fb;</span>
 			</td>
 		</tr>
 	</table>
 	<table  border="0" cellpadding="3" cellspacing="0" width="100%">
 		<tr>
-			<td align="center"><strong>ใบกำกับการขนส่งของเสียอันตราย</strong>	</td>			
+			<td align="center"><h3>ใบกำกับการขนส่งของเสียอันตราย</h3>	</td>			
 		</tr>
 		<tr>
-			<td align="center"><strong>(Uniform Hazardous Waste Manifest)</strong>	</td>			
+			<td align="center"><h3>(Uniform Hazardous Waste Manifest)</h3>	</td>			
 		</tr>
 	</table>
 	</td> <!-- end main table-->
