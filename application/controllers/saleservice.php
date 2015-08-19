@@ -630,9 +630,9 @@ function techreview_submit() {
 }
 //Technical Review ####################################################################################################################
 	function quo_pdf(){
+		$qt_id = $this->input->get("qt_id");
 		$this->load->model("saleservice_model");
-		$this->saleservice_model->quo_pdf();
-		
+		$this->saleservice_model->quo_pdf("$qt_id");
 	}
 }
 

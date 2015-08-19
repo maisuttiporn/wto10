@@ -127,14 +127,18 @@ class saleservice_model extends CI_Model{
         $this->db->where("qt_id",$qt_id);
         $this->db->update("saleservice_quotation",$data); 
     }
-    function quo_pdf(){
+    function quo_pdf($qt_id){    
     $data ="";
+
+    $data["quotation"] = $this->getitem_quotation($qt_id);
+    $data["quotationdesc"] = $this->getitem_quotationdesc($qt_id);
+    
     $this->load->library('mypdf');
     $tcpdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);
     $tcpdf->SetFont('thsarabun', '', 14, '', true);
     $tcpdf->SetPrintHeader(false);
     $tcpdf->SetPrintFooter(false);
-    $tcpdf->SetMargins(5, 5, 5, true);
+    $tcpdf->SetMargins(5, 5, 5, 0);
     $tcpdf->AddPage();
     $html = $this->load->view("saleservice/quo_pdf",$data,true);
     $tcpdf->writeHTML($html, false, false, false, false, '');

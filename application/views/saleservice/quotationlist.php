@@ -19,7 +19,7 @@
 			<td><?= $row->qt_compname?></td>
 			<td><?= $row->qt_createby?></td>
 			<td>
-			<a href="<?=base_url()?>saleservice/quo_pdf" target="_blank" class="btn btn-default">PDF</a>
+			<a href="<?=base_url()?>saleservice/quo_pdf?qt_id=<?=$row->qt_id?>" target="_blank" class="btn btn-default">PDF</a>
 			<?php if($row->qt_status=="new") :?>
 			<a href="<?=base_url()?>saleservice/techreview?qt_id=<?= $row->qt_id?>" class="btn btn-primary">Technician Review </a>
 			<?php else : ?>

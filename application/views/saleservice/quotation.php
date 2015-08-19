@@ -105,6 +105,7 @@
 					</label>
 		    		</div>
 		    	</div>
+		    	<!--
 		    	<div class="span3">
 		    		<div class="form-group">
 		    		<label for="">						
@@ -112,6 +113,7 @@
 					</label>
 		    		</div>
 		    	</div>
+		    	-->
 		    	<div class="span2">
 		    		<div class="form-group">
 		    		<label for="">	

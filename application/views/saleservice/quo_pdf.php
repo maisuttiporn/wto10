@@ -40,7 +40,7 @@ border-right: 2px solid black;
 		<td width="25%"><img width="120" src="<?=base_url()?>theme/img/logo-tmos.png" 
 		alt="">
 		<br>
-		<strong>ที่ </strong> TOMS 01/2558</td>
+		<strong>ที่ </strong> <?=$quotation->qt_id?></td>
 
 		<td width="75%">
 		<table cellpadding="0" cellspacing="0" width="100%">
@@ -58,35 +58,35 @@ border-right: 2px solid black;
 			</tr>
 			<tr>
 				<td align="right"><br><h4 style="padding:0px;marsin:0px;font-weight: 900;">
-				<strong style="font-weight: 900;" class="text1">วันที่ 27 สิงหาคม 2558 </strong></h4></td>				
+				<strong style="font-weight: 900;" class="text1"><?=thai_date(strtotime($quotation->DOC_DATETIME))?> </strong></h4></td>				
 			</tr>
 		</table>		
 		</td>
 	</tr>
 	
 	<tr>
-		<td colspan="2"><strong class="text1">เรื่อง :</strong> <span class="text2">อัตราให้บริการบำบัดน้ำเสีย</span></td>	
+		<td colspan="2"><strong class="text1">เรื่อง :</strong> <span class="text2"><?=$quotation->qt_title?></span></td>	
 	</tr>
 	<tr>
-		<td colspan="2"><strong class="text1">เรียน :</strong> <span class="text2">คุณรัชนิกานต์​ เครือบ้านนา</span></td>	
+		<td colspan="2"><strong class="text1">เรียน :</strong> <span class="text2">คุณ<?=$quotation->qt_compcontact?></span></td>	
 	</tr>
 	<tr>
 		<td colspan="2"><strong class="text1">บริษัท :</strong> <span class="text2">
-		บริษัท อาอิชิ อินเตอร์ เนชั่นเนล (ไทยแลนด์) จำกัด
+		<?=$quotation->qt_compname?>
 		</span></td>	
 	</tr>
 	
 	<tr>
 		<td colspan="2"><strong class="text1">ที่อยู่ :</strong> <span class="text2">
-		150/68 นิคมอุตสาหกรรมปิ่นทอง 2 ม.9 ต.หนองขาม อ.ศรีราชา จ.ชลบุรี 20110
+		<?=$quotation->qt_compaddr?>
 		</span></td>	
 	</tr>
 	<tr>
 		<td><strong class="text1">โทร :</strong> <span class="text2">
-		038-472910-6
+		<?=$quotation->qt_comptel?>
 		</span></td>	
 		<td><strong class="text1">โทรสาร :</strong> <span class="text2">
-		038-347298 <br>
+		<?=$quotation->qt_compfax?> <br>
 		</span></td>	
 	</tr>
 	<tr>
@@ -94,46 +94,22 @@ border-right: 2px solid black;
 		<p align="left" class="text2" >
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			บริษัท ไทย โอนลี่ วัน แมนเนจ แอนด์ เซอร์วิส จำกัด ใคร่ขอนำเสนออัตราค่าบริการบำบัดและกำจัดกากอุตสาหกรรมของบริษัทท่านให้เป็นไปอย่างถูกต้องตามหลักวิชาการและสอดคล้องกับประกาศกระทรวงอุตสาหกรรมออกตามความในพระราชบัญญัติโรงงานพ.ศ.2535&nbsp;เรื่อง&nbsp;การกำจัดสิ่งปฏิกูลหรือวัสดุที่ไม่ใช้แล้ว ดังนี้
-		</p>
-	
+		</p>	
 		</td>	
 	</tr>
 </table>
-
 <table cellpadding="0" cellspacing="0" border="0" width="88%">
-	<tr>	
-		<br>
-		<td class="text1" width="40%">ค่าบำบัดและกำจัดกากอุตสาหกรรม</td>
+	<?php foreach ($quotationdesc as $row) :?>
+	<tr>			
+		<td class="text1" width="40%"><?=$row->qt_desc?></td>
 		<td class="text1"></td>
 		<td class="text1"></td>
-		<td class="text1" align="right"></td>
+		<td class="text1" align="right"><?=numformat($row->qt_price)?>/<?=$row->qt_unit?></td>
 	</tr>
-	<tr>
-		<td class="text1" width="40%">น้ำมันปนเปื้อนน้ำมัน</td>
-		<td class="text1">10 ตัน</td>
-		<td class="text1">ตันละ 2,500 </td>
-		<td class="text1" align="right">รวม 25,000</td>
-	</tr>
-	<tr>
-		<td class="text1" width="40%">Used Coolant</td>
-		<td class="text1">10 ตัน</td>
-		<td class="text1">ตันละ 2,500 </td>
-		<td class="text1" align="right">รวม 25,000</td>
-	</tr>
-	<tr>
-		<td class="text1" width="40%">ค่าขนส่ง</td>
-		<td class="text1">20 เที่ยว</td>
-		<td class="text1">เที่ยวละ 2,500 </td>
-		<td class="text1" align="right">รวม 50,000</td>
-	</tr>
+	<?php endforeach; ?>
 
-	<tr>
-		<td class="text1" width="40%"></td>
-		<td class="text1"></td>	
-		<td colspan="2" class="text1" align="right"><br><h3>รวมทั้งสิ้น 500,000</h3> </td>
-	</tr>
+	
 </table>
-
 
 <table cellpadding="0" cellspacing="0" border="0" width="100%">
 	<tr>
@@ -157,10 +133,54 @@ border-right: 2px solid black;
 	<tr>
 		<td colspan="2">
 			 จึงขอบคุณมา ณ โอกาสนี้ด้วย
+			 <br>
 		</td>
 	</tr>
 </table>
-<br><br><br><br>
+
+<table cellpadding="10" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="text1" width="60%" border="1" align="center">
+			<h3>บริษัท อาอิชิ อินเตอร์ เนชั่นแนล (ไทยแลนด์) จำกัด <br> 
+			ยอมรับค่าบริการและเงื่อนไขดังกล่าวข้างต้น
+			</h3>
+			................................................................................
+			(................................................................................)
+			วัน........เดือน.....................พ.ศ..........
+		</td>
+		<td width="" align="center">
+			<table>
+				<tr>
+					<td>
+						<h3>ขอแสดงความนับถือ</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<br><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3 style="margin-top:200px;">..................................................</h3>
+					</td>
+				</tr>
+				<tr>
+					<td><h3>(นายชัยวัฒน์  ศิริเมืองมูล)</h3></td>
+				</tr>
+				<tr>
+					<td><h3>กรรมการผู้จัดการ</h3></td>
+				</tr>
+			</table>			
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<h4>ติดต่ออบถามข้อมูลเพิ่มเติม <br>
+			ฝ่ายบริหารหารตลาด : คุณอดิศักดิ์ 089-2563512</h4>					
+		</td>
+	</tr>
+</table>
 
 <style>
 	#TBInquiry1{
@@ -176,3 +196,5 @@ border-right: 2px solid black;
 	}
 
 </style>
+
+

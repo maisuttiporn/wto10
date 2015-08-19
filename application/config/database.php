@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'db2.bangkokwebpro.com';
 $db['default']['username'] = 'admin_water';
 $db['default']['password'] = 'admin_water';
 $db['default']['database'] = 'admin_water';
